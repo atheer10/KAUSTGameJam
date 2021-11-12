@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 281241647058918126}
   - component: {fileID: 281241647058918112}
   - component: {fileID: 281241647058918113}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,8 @@ GameObject:
   - component: {fileID: 281241647639710166}
   - component: {fileID: 281241647639710154}
   - component: {fileID: 6992201464697567914}
-  m_Layer: 0
+  - component: {fileID: 8204272299791030636}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,6 +235,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionController: {fileID: 2061047260}
+--- !u!114 &8204272299791030636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281241647639710167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8751fc96d53bd9848a2474abdac1864a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCollected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6426835916547643539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -244,14 +260,6 @@ PrefabInstance:
     - target: {fileID: 6426835917718310222, guid: 2e9cad15645c2d24e810f16fff32e162, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6426835917718310222, guid: 2e9cad15645c2d24e810f16fff32e162, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6426835917718310222, guid: 2e9cad15645c2d24e810f16fff32e162, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6426835917718310222, guid: 2e9cad15645c2d24e810f16fff32e162, type: 3}
       propertyPath: m_LocalPosition.x
