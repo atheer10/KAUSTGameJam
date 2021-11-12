@@ -45,6 +45,15 @@ public class TransitionController : MonoBehaviour
         }
     }
 
+    [Button]
+    public void Toggle() {
+        if (IsWinter) {
+            Open();
+        } else {
+            Close();
+        }
+    }
+
     private void OpenNoAnimation() {
         transform.localScale = 100f * Vector2.one;
     }
