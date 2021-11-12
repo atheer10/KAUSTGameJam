@@ -7,8 +7,6 @@ public class InteractableObject : MonoBehaviour
     TransitionController transitioned;
     Collider2D col;
     [SerializeField]
-    public bool colliderOnWinter;
-    [SerializeField]
     public bool colliderOnSpring;
 
 
@@ -28,23 +26,18 @@ public class InteractableObject : MonoBehaviour
     {
         if(colliderOnSpring)
         {
-            // original state is no trigger , winter 
-            col.isTrigger = true;
-            Debug.Log("here");
-
-        }
-        if (colliderOnWinter)
-        {
-            if(col.isTrigger == false)
+            if (col.isTrigger == false)
             {
                 col.isTrigger = true;
             }
+            else if (col.isTrigger == true)
+            {
+                col.isTrigger = false;
+            }
+
         }
 
-        else
-        {
-            col.isTrigger = false;
-        }
+
     }
 
 }
