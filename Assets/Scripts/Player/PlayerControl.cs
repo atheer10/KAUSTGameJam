@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         PlayerMove(horizontalInput);
@@ -38,18 +38,17 @@ public class PlayerControl : MonoBehaviour
             gameObject.transform.localScale = new Vector2(-1, gameObject.transform.localScale.y);
         }
 
+    }
+
+    private void Update()
+    {
         //Jump
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpVelocity;
-            jumpTimeCounter = normalJumpTime;
             isJumping = true;
+            jumpTimeCounter = normalJumpTime;
             isGrounded = false;
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            isJumping = false;
         }
 
         if (Input.GetButtonDown("Jump") && isGrounded == false && isJumping == true)
@@ -65,8 +64,12 @@ public class PlayerControl : MonoBehaviour
             }
         }
 
-    }
 
+        if (Input.GetButtonUp("Jump"))
+        {
+            isJumping = false;
+        }
+    }
 
 
     private void PlayerMove(float moveDir)
