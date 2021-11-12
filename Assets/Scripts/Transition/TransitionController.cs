@@ -21,9 +21,9 @@ public class TransitionController : MonoBehaviour
 
     [Button]
     public void Open() {
-        OnSpring.Invoke();
         IsWinter = false;
         IsSpring = true;
+        OnSpring.Invoke();
 
         if (Application.isPlaying) {
             animator.SetBool("Open", true);
@@ -34,9 +34,9 @@ public class TransitionController : MonoBehaviour
 
     [Button]
     public void Close() {
-        OnWinter.Invoke();
         IsWinter = true;
         IsSpring = false;
+        OnWinter.Invoke();
 
         if (Application.isPlaying) {
             animator.SetBool("Open", false);
