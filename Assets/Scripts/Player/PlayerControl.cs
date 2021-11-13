@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     private float groundCheckRadius;
     private Rigidbody2D rb;
+    private Animator anim;
     private float horizontalInput;
     private bool isJumping;
     private float jumpTimeCounter;
@@ -26,6 +27,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,6 +45,10 @@ public class PlayerControl : MonoBehaviour
             gameObject.transform.localScale = new Vector2(-1, gameObject.transform.localScale.y);
         }
 
+        if(horizontalInput == 0)
+        {
+            anim.SetBool("Walking", false);
+        }
     }
 
     private void Update()
@@ -54,6 +60,7 @@ public class PlayerControl : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
+            anim.SetTrigger("Jump");
             jumpTimeCounter = normalJumpTime;
             isGrounded = false;
         }
@@ -82,7 +89,7 @@ public class PlayerControl : MonoBehaviour
     private void PlayerMove(float moveDir)
     {
         rb.velocity = new Vector2(moveDir * speed, rb.velocity.y);
-
+        anim.SetBool("Walking", true);
     }
 
 
