@@ -9,7 +9,12 @@ public class PlayerControl : MonoBehaviour
     private float speed;
     [SerializeField]
     private float jumpVelocity;
-
+    [SerializeField]
+    private Vector2 bottomOffset;
+    [SerializeField]
+    LayerMask groundLayer;
+    [SerializeField]
+    private float groundCheckRadius;
     private Rigidbody2D rb;
     private float horizontalInput;
     private bool isJumping;
@@ -42,6 +47,8 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
+        isGrounded = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, groundCheckRadius, groundLayer);
+
         //Jump
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
@@ -76,5 +83,13 @@ public class PlayerControl : MonoBehaviour
     {
         rb.velocity = new Vector2(moveDir * speed, rb.velocity.y);
 
+    }
+
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, groundCheckRadius);
     }
 }
