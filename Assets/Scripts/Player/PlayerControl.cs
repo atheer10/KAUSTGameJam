@@ -23,11 +23,17 @@ public class PlayerControl : MonoBehaviour
     //jumpTime
     public float normalJumpTime = 0.15f;
     public bool isGrounded;
+    TransitionController transitioned;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        transitioned = FindObjectOfType<TransitionController>();
+        anim.SetBool("PlayerWinter", false);
+        transitioned?.OnWinter.AddListener(setPlayerAnimation);
+        transitioned?.OnSpring.AddListener(setPlayerAnimation);
     }
 
     // Update is called once per frame
@@ -93,6 +99,19 @@ public class PlayerControl : MonoBehaviour
     }
 
 
+    private void setPlayerAnimation()
+    {
+        if (transitioned.IsSpring)
+        {
+
+            anim.SetBool("PlayerWinter", false);
+        }
+        if (transitioned.IsWinter)
+        {
+            anim.SetBool("PlayerWinter", true);
+
+        }
+    }
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
