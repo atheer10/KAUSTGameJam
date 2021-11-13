@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour
     Color invisablePlayer;
     void Start()
     {
-        water = FindObjectOfType<Water>();
         player = FindObjectOfType<PlayerControl>();
         invisablePlayer = player.GetComponent<SpriteRenderer>().color;
-        water?.onPlayerDeath.AddListener(playerHasDied);
+        foreach (Water water in FindObjectsOfType<Water>())
+        {
+            water?.onPlayerDeath.AddListener(playerHasDied);
+        }
     }
 
 

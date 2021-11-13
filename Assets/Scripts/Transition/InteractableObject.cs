@@ -19,25 +19,20 @@ public class InteractableObject : MonoBehaviour
         transitioned?.OnSpring.AddListener(seasonChecker);
     }
 
-    // Update is called once per frame
-
-
     public void seasonChecker()
     {
-        if (colliderOnSpring)
+        if (colliderOnSpring && transitioned.IsSpring)
         {
-            if (col.isTrigger == false)
-            {
-                col.isTrigger = true;
-            }
-            else if (col.isTrigger == true)
-            {
-                col.isTrigger = false;
-            }
-
+            col.enabled = true;
         }
-
-
+        else if (!colliderOnSpring && transitioned.IsWinter)
+        {
+            col.enabled = true;
+        }
+        else
+        {
+            col.enabled = false;
+        }
     }
 
 }
