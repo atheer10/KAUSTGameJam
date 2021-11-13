@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!50 &330333848303853859
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736055888539624764}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!66 &9100263150935141623
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736055888539624764}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1197032673116730977}
+    m_ColliderPaths: []
+  m_CompositePaths:
+    m_Paths: []
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
 --- !u!1 &6021331328823485297
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,6 +123,10 @@ PrefabInstance:
     - target: {fileID: 341987702062037726, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
       propertyPath: m_Name
       value: W_Collision
+      objectReference: {fileID: 0}
+    - target: {fileID: 341987702062037726, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2519452807003475860, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
       propertyPath: m_RootOrder
@@ -174,6 +223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: C_Collision
       objectReference: {fileID: 0}
+    - target: {fileID: 341987702062037726, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2519452807003475860, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -226,6 +279,10 @@ PrefabInstance:
       propertyPath: m_MaskInteraction
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6168686171842947459, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6186325276773709712, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
       propertyPath: m_Name
       value: Common
@@ -250,6 +307,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2519452807003475860, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
   m_PrefabInstance: {fileID: 4973985803412217826}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4736055888539624764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 341987702062037726, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
+  m_PrefabInstance: {fileID: 4973985803412217826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!19719996 &1197032673116730977 stripped
+TilemapCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6168686171842947459, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
+  m_PrefabInstance: {fileID: 4973985803412217826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6176892615168014200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,6 +335,10 @@ PrefabInstance:
     - target: {fileID: 341987702062037726, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
       propertyPath: m_Name
       value: S_Collision
+      objectReference: {fileID: 0}
+    - target: {fileID: 341987702062037726, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2519452807003475860, guid: 7c68ed58edbfed343bc0f6bb55804c50, type: 3}
       propertyPath: m_RootOrder
