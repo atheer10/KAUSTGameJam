@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class Treehouse : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Treehouse : MonoBehaviour
         collecter.OnCollected.AddListener(RevealBranch);
     }
 
+    [Button]
     private void RevealBranch(Collectible collectible) {
         if (nextBranch < branches.Length) {
             branches[nextBranch].Show();
