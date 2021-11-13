@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  jumpVelocity: 13
+  jumpVelocity: 18
   bottomOffset: {x: 0, y: -0.65}
   groundLayer:
     serializedVersion: 2
