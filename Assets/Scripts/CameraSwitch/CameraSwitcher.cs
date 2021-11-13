@@ -14,10 +14,6 @@ public class CameraSwitcher : MonoBehaviour
         Initialize();
     }
 
-    void OnValidate() {
-        Initialize();
-    }
-
     void Initialize() {
         playerControl = FindObjectOfType<PlayerControl>();
         cineCam = GetComponentInChildren<CinemachineVirtualCamera>();
