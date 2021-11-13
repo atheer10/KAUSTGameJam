@@ -6078,8 +6078,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6180500358707476733, guid: 3a7561e07c96acb4e8b77b1e5f225081, type: 3}
-      propertyPath: m_Follow
-      value: 
+      propertyPath: m_Priority
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8333152088505349464, guid: 3a7561e07c96acb4e8b77b1e5f225081, type: 3}
       propertyPath: m_RootOrder
