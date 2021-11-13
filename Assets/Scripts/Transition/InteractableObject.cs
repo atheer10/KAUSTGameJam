@@ -23,15 +23,15 @@ public class InteractableObject : MonoBehaviour
     {
         if (colliderOnSpring && transitioned.IsSpring)
         {
-            col.isTrigger = false;
+            col.enabled = true;
         }
         else if (!colliderOnSpring && transitioned.IsWinter)
         {
-            col.isTrigger = false;
+            col.enabled = true;
         }
         else
         {
-            col.isTrigger = true;
+            col.enabled = false;
         }
     }
 
