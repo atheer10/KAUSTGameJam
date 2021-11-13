@@ -986,5 +986,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6443941693182266036, guid: ea58fa2aad872dc469bd3513ee6aba52, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[10].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443941693182266036, guid: ea58fa2aad872dc469bd3513ee6aba52, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[13].m_Data
+      value: 
+      objectReference: {fileID: 8595203703398758375, guid: ac69eaf0f15243a44986e078bf210067, type: 3}
+    - target: {fileID: 6443941693182266036, guid: ea58fa2aad872dc469bd3513ee6aba52, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[10].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443941693182266036, guid: ea58fa2aad872dc469bd3513ee6aba52, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[13].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443941693182266036, guid: ea58fa2aad872dc469bd3513ee6aba52, type: 3}
+      propertyPath: m_Tiles.Array.data[62].second.m_TileSpriteIndex
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea58fa2aad872dc469bd3513ee6aba52, type: 3}
